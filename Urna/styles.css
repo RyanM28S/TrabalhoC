@@ -126,6 +126,49 @@ header {
           font-size: 1.5rem;
           letter-spacing: 4px;
 }
+
+
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 2rem;
+      padding-left: 30px;
+      border-left: 1px solid #2b1819; 
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px; 
+      top: 4px;
+      width: 11px;
+      height: 11px;
+      background-color: #9d0121;
+      border-radius: 50%;
+    }
+
+    .timeline-year {
+      color: #9d0121;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin: 0 0 6px 0;
+    }
+
+    .timeline-text {
+      color: #8c8784;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+
+
 .parte2 {
       background-color: #0b0907;
         padding: 1rem 4rem;
@@ -165,6 +208,7 @@ header {
 .buttoes {
     display: flex;
     justify-content: space-between;
+
 }
 .voltar {
       background-color: transparent;
@@ -203,7 +247,7 @@ header {
         height: 100vh;
 
         h1 {
-        font-size: 4rem;
+        font-size: 2rem;
         color: #d2be93;
         color: #e7dfc7;
      font-family: "Libre Caslon Text", serif;
@@ -215,7 +259,7 @@ header {
     display: block;
     margin: 1rem auto;
     width: 80%;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: start;
      font-family: "Libre Caslon Text", serif;
     padding: 1rem 2rem;
@@ -264,3 +308,4 @@ header {
 .explicacao {
     color:  white;
 }
+
