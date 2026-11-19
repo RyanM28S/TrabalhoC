@@ -256,3 +256,11 @@ header {
     border: 1px solid #9d0020;
     color: #d6c295;
    }
+
+.começar {
+    text-decoration: none;
+    color: white;
+}
+.explicacao {
+    color:  white;
+}
