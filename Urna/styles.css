@@ -1,311 +1,683 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #0c0b09;
-    align-items: center;
-    border-bottom: #d6c295 1px solid;
 
-    h1{
-        color: #d6c295;
-          font-family: "Special Elite", system-ui;
-          font-weight: 300;
-          letter-spacing: 4px;
-    }
+@view-transition {
+  navigation: auto;
 }
-.iten{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-     font-family: "Libre Franklin", sans-serif;
+
+
+@keyframes surgirSuave {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #0c0b09;
+  align-items: center;
+  border-bottom: #d6c295 1px solid;
+
+  h1 {
     color: #d6c295;
-    font-size: 1.2rem;
+    font-family: "Special Elite", system-ui;
+    font-weight: 300;
+    letter-spacing: 4px;
+  }
 }
+
+.iten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Libre Franklin", sans-serif;
+  color: #d6c295;
+  font-size: 1.2rem;
+}
+
 .itens {
-    display: flex;
-   gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
-.circulo{
-    padding: 0.3rem 0.7rem;
-    border: 2px #d6c295 solid;
-    font-size: 1.2rem;
-    border-radius: 50%;
+
+.circulo {
+  padding: 0.3rem 0.7rem;
+  border: 2px #d6c295 solid;
+  font-size: 1.2rem;
+  border-radius: 50%;
 }
+
+
 .parte1 {
-    display: flex;
-    padding: 1rem 4rem;
+  display: flex;
+  padding: 1rem 4rem;
   min-height: 100vh;
   align-items: center;
   min-width: 100vh;
   background-color: #0b0907;
-    justify-content: space-between;
-   
+  justify-content: space-between;
 }
-.des {
-    color: #d4c094;
-     font-family: "Libre Franklin", sans-serif;
-     margin: 1rem;
-}
-.direita {
-   margin-left: 10rem;
-   margin-right:1rem ;
 
-   button{
+.des {
+  color: #d4c094;
+  font-family: "Libre Franklin", sans-serif;
+  margin: 1rem;
+}
+
+.direita {
+  margin-left: 10rem;
+  margin-right: 1rem;
+
+  .museu {
+    opacity: 0;
+    animation: surgirSuave 0.6s ease-out 0.1s forwards;
+  }
+
+  button {
     background-color: #9d0121;
     color: #ede4d4;
     padding: 1.5rem 4rem;
-      font-family: "Special Elite", system-ui;
-      font-size: 1.5rem;
-      border: none;
-      margin: 1rem auto;
-      transition: all 0.5s ease;
-   }
-   button:hover{
+    font-family: "Special Elite", system-ui;
+    font-size: 1.5rem;
+    border: none;
+    margin: 1rem auto;
+    transition: all 0.5s ease;
+    opacity: 0;
+    animation: surgirSuave 0.6s ease-out 0.55s forwards;
+  }
+  button:hover {
     background-color: #b6032a;
     transform: translateY(-4px);
-   }
-   h1{
+  }
+  h1 {
     font-size: 7rem;
     font-weight: 500;
     letter-spacing: 4px;
-  
     color: #e7dfc7;
-     font-family: "Libre Caslon Text", serif;
-  font-style: normal;
-  span{
-    font-style: italic;
-    color: #d4c094;
+    font-family: "Libre Caslon Text", serif;
+    font-style: normal;
+    opacity: 0;
+    animation: surgirSuave 0.6s ease-out 0.25s forwards;
+
+    span {
+      font-style: italic;
+      color: #d4c094;
+    }
   }
-   }
-   h2{
-      font-family: "Libre Caslon Text", serif;
-  font-style: normal;
-  font-weight: 400;
-  margin: 1rem auto;
- font-size: 1.5rem;
- line-height: 1.5;
-  color: #9e937f;
-   }
-  
+  h2 {
+    font-family: "Libre Caslon Text", serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #9e937f;
+    opacity: 0;
+    animation: surgirSuave 0.6s ease-out 0.4s forwards;
+  }
 }
+
 .museu {
-     font-family: "Special Elite", system-ui;
-          font-weight: 300;
-          margin: 1rem auto;
-          color: #970121;
-          font-size: 1.5rem;
-          letter-spacing: 4px;
+  font-family: "Special Elite", system-ui;
+  font-weight: 300;
+  margin: 1rem auto;
+  color: #970121;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
 }
+
 .esquerda {
- margin-right: 10rem;
- display: block;
-   margin: auto;
-   h1{
+  margin-right: 10rem;
+  display: block;
+  margin: auto;
+  opacity: 0;
+  animation: surgirSuave 0.8s ease-out 0.45s forwards;
+
+  h1 {
     color: #9d0121;
-   transform: rotate(20deg);
-   border :#970121 solid 1px;
+    transform: rotate(20deg);
+    border: #970121 solid 1px;
     width: fit-content;
     background-color: #0b0907;
-   }
-    img {
-        height: 500px;
-        border: #d4c094 1px solid;
-    }
+  }
+  img {
+    height: 500px;
+    border: #d4c094 1px solid;
+  }
 }
+
+
 .dosie {
-     font-family: "Special Elite", system-ui;
-          font-weight: 300;
-          margin: 1rem auto;
-          color: #970121;
-          font-size: 1.5rem;
-          letter-spacing: 4px;
+  font-family: "Special Elite", system-ui;
+  font-weight: 300;
+  margin: 1rem auto;
+  color: #970121;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
 }
 
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem;
+  padding-left: 30px;
+  border-left: 1px solid #2b1819;
+}
 
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: surgirSuave 0.5s ease-out forwards;
+}
 
-    .timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 2rem;
-      padding-left: 30px;
-      border-left: 1px solid #2b1819; 
-    }
+.timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.35s; }
+.timeline-item:nth-child(3) { animation-delay: 0.5s; }
+.timeline-item:nth-child(4) { animation-delay: 0.65s; }
+.timeline-item:nth-child(5) { animation-delay: 0.8s; }
 
-    .timeline-item {
-      position: relative;
-      margin-bottom: 32px;
-    }
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #9d0121;
+  border-radius: 50%;
+}
 
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -36px; 
-      top: 4px;
-      width: 11px;
-      height: 11px;
-      background-color: #9d0121;
-      border-radius: 50%;
-    }
+.timeline-year {
+  color: #d7c096;
+  font-family: "Special Elite", system-ui;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 0 6px 0;
+}
 
-    .timeline-year {
-      color: #9d0121;
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin: 0 0 6px 0;
-    }
-
-    .timeline-text {
-      color: #8c8784;
-      font-size: 1.5rem;
-      line-height: 1.5;
-      margin: 0;
-    }
-
-
+.timeline-text {
+  color: #8c8784;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
 
 .parte2 {
-      background-color: #0b0907;
-        padding: 1rem 4rem;
-        height: 100vh;
-    h1 {
-        font-size: 4rem;
-        color: #d2be93;
-        color: #e7dfc7;
-     font-family: "Libre Caslon Text", serif;
-     font-weight: 500;
-        margin: 1rem auto;
-    }
+  background-color: #0b0907;
+  padding: 1rem 4rem;
+
+  .dosie {
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.1s forwards;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: #e7dfc7;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 500;
+    margin: 1rem auto;
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.2s forwards;
+  }
+
+  .buttoes {
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.85s forwards;
+  }
 }
+
 .cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
 }
+
 .card {
+  background-color: #d2be93;
+  padding: 1rem 2rem;
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: surgirSuave 0.5s ease-out forwards;
 
-    background-color: #d2be93;
-    padding: 1rem 2rem;
-    h2{
-      font-family: "Special Elite", system-ui;
-          font-weight: 300;
-          margin: 1rem auto;
-          color: #970121;
-          font-size: 1.5rem;
-          letter-spacing: 4px;   
-    }
-    p{
-        font-size: 1.7rem;
-        line-height: 1.5;
-    }
-
+  h2 {
+    font-family: "Special Elite", system-ui;
+    font-weight: 300;
+    margin: 1rem auto;
+    color: #970121;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+  }
+  p {
+    font-size: 1.7rem;
+    line-height: 1.5;
+  }
 }
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.45s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.75s; }
+
+.card:hover {
+  transform: rotate(10deg) scale(1.05) translateY(-4px);
+}
+
+
 .buttoes {
-    display: flex;
-    justify-content: space-between;
-
+  display: flex;
+  justify-content: space-around;
 }
+
 .voltar {
-      background-color: transparent;
-      
-    color: #ede4d4;
-    padding: 1.5rem 4rem;
-      font-family: "Special Elite", system-ui;
-      font-size: 1.5rem;
-      border: 0.1px solid #b4b4b4;
-      margin: 1rem auto;
-      transition: all 0.5s ease;
+  background-color: transparent;
+  color: #ede4d4;
+  padding: 1.5rem 4rem;
+  font-family: "Special Elite", system-ui;
+  font-size: 1.5rem;
+  border: 0.1px solid #b4b4b4;
+  margin: 1rem auto;
+  transition: all 0.5s ease;
 }
-.voltar:hover{
-    background-color: #d4c094;
-    color: #0b0907;
-    transform: translateY(-4px);
-   }
+
+.voltar:hover {
+  background-color: #d4c094;
+  color: #0b0907;
+  transform: translateY(-4px);
+}
+
 .continuar {
-       background-color: #9d0121;
-    color: #ede4d4;
-    padding: 1.5rem 4rem;
-      font-family: "Special Elite", system-ui;
-      font-size: 1.5rem;
-      border: none;
-      margin: 1rem auto;
-      transition: all 0.5s ease;
+  background-color: #9d0121;
+  color: #ede4d4;
+  padding: 1.5rem 4rem;
+  font-family: "Special Elite", system-ui;
+  font-size: 1.5rem;
+  border: none;
+  margin: 1rem 0;
+  transition: all 0.5s ease;
 }
-.continuar:hover{
-    background-color: #b6032a;
-    transform: translateY(-4px);
-   }
 
-   .parte3 {
-        background-color: #0b0907;
-        padding: 1rem 4rem;
-        height: 100vh;
+.continuar:hover {
+  background-color: #b6032a;
+  transform: translateY(-4px);
+}
 
-        h1 {
-        font-size: 2rem;
-        color: #d2be93;
-        color: #e7dfc7;
-     font-family: "Libre Caslon Text", serif;
-     font-weight: 500;
-        margin: 1rem auto;
-    }
-   }
-   .opcao{
-    display: block;
+
+.parte3 {
+  background-color: #0b0907;
+  padding: 1rem 4rem;
+  min-height: 100vh;
+  align-items: center;
+
+  #QP {
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.1s forwards;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #e7dfc7;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 500;
     margin: 1rem auto;
-    width: 80%;
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.2s forwards;
+  }
+
+  .buttoes {
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.7s forwards;
+  }
+}
+
+.opcao {
+  display: block;
+  margin: 2rem auto;
+  width: 80%;
+  font-size: 1.5rem;
+  text-align: start;
+  font-family: "Libre Caslon Text", serif;
+  padding: 2rem 3rem;
+  background-color: transparent;
+  color: #e4dec4;
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: surgirSuave 0.5s ease-out forwards;
+
+  span {
+    font-family: "Special Elite", system-ui;
+    margin: 1rem;
     font-size: 2rem;
-    text-align: start;
-     font-family: "Libre Caslon Text", serif;
-    padding: 1rem 2rem;
-    background-color: transparent;
-    color: #d6c295;
-    transition: all 0.5s ease;
-    span{
-         font-family: "Special Elite", system-ui;
-         margin: 1rem;
-    }
-   }
-   .opcao:hover {
-    background-color: #d6c295;
-    color: #0b0907;
-    transform: scale(1.1);
-   }
-   .opcaov{
-      display: block;
-    margin: 1rem auto;
-    width: 80%;
-    font-size: 3rem;
-    text-align: start;
-     font-family: "Libre Caslon Text", serif;
-    padding: 1rem 2rem;
-    background-color: #1a2015;
-    border: 1px solid #569558;
-    color: #d6c295;
-   }
-   .opcaof {
-      display: block;
-    margin: 1rem auto;
-    width: 80%;
-    font-size: 3rem;
-    text-align: start;
-     font-family: "Libre Caslon Text", serif;
-    padding: 1rem 2rem;
-    background-color: #220e0e;
-    border: 1px solid #9d0020;
-    color: #d6c295;
-   }
+  }
+}
+
+#opcao1 { animation-delay: 0.3s; }
+#opcao2 { animation-delay: 0.4s; }
+#opcao3 { animation-delay: 0.5s; }
+#opcao4 { animation-delay: 0.6s; }
+
+.opcao:hover {
+  background-color: #d6c295;
+  color: #0b0907;
+  transform: scale(1.05);
+}
+
+.opcaov {
+  display: block;
+  margin: 1rem auto;
+  width: 80%;
+  font-size: 2rem;
+  text-align: start;
+  font-family: "Libre Caslon Text", serif;
+  padding: 1rem 2rem;
+  background-color: #1a2015;
+  border: 1px solid #569558;
+  color: #d6c295;
+}
+
+.opcaof {
+  display: block;
+  margin: 1rem auto;
+  width: 80%;
+  font-size: 2rem;
+  text-align: start;
+  font-family: "Libre Caslon Text", serif;
+  padding: 1rem 2rem;
+  background-color: #220e0e;
+  border: 1px solid #9d0020;
+  color: #d6c295;
+}
 
 .começar {
-    text-decoration: none;
-    color: white;
-}
-.explicacao {
-    color:  white;
+  text-decoration: none;
+  color: white;
 }
 
+
+#explica {
+  display: none;
+  margin: 1rem auto;
+  padding: 24px 28px;
+  width: 80%;
+  background-color: #d3bf92;
+  color: #0b0907;
+  font-size: 1.8rem;
+  font-family: "Libre Caslon Text", serif;
+  line-height: 1.5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#explica.aparece {
+  display: block;
+  animation: surgirSuave 0.4s ease-out forwards;
+}
+
+#explica.acerto {
+  border-left: 8px solid #2e7d32;
+}
+
+#explica.erro {
+  border-left: 8px solid #9d0121;
+}
+
+.explicacao strong {
+  display: block;
+  width: fit-content;
+  font-family: "Special Elite", system-ui;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 18px; 
+  transform: rotate(-6deg);
+  background-color: transparent;
+}
+
+
+#explica.acerto .explicacao strong {
+  color: #1b5e20;
+  border: #2e7d32 solid 4px;
+}
+
+
+#explica.erro .explicacao strong {
+  color: #9d0121;
+  border: #970121 solid 4px;
+}
+.parte4 {
+  background-color: #0b0907;
+  padding: 1rem 4rem;
+  min-height: 100vh;
+  text-align: center;
+
+  .dosie {
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.1s forwards;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #e7dfc7;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 500;
+    margin: 1rem auto;
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.2s forwards;
+  }
+
+  h2 {
+    font-family: "Libre Caslon Text", serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #9e937f;
+    opacity: 0;
+    animation: surgirSuave 0.6s ease-out 0.35s forwards;
+  }
+}
+
+.caixa {
+  text-align: center;
+  width: 80%;
+  background-color: #191613;
+  padding: 4rem 2rem;
+  margin: 1rem auto;
+  border: #3c3733 1px solid;
+  opacity: 0;
+  animation: surgirSuave 0.6s ease-out 0.5s forwards;
+
+  h1 {
+    color: #d7c396;
+    font-family: "Special Elite", system-ui;
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.65s forwards;
+  }
+
+  h2 {
+    font-family: "Libre Caslon Text", serif;
+    color: #ded5be;
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.8s forwards;
+  }
+
+  a {
+    color: #e7dcc7;
+    padding: 1rem 2rem;
+    border: 2px solid #3c3832;
+    font-size: 2rem;
+    font-family: "Libre Caslon Text", serif;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.95s forwards;
+  }
+
+  a:hover {
+    border: #e4dec4 2px solid;
+    transform: scale(1.05) translateY(-4px);
+    color: #e7dcc7;
+  }
+}
+
+
+.parte5 {
+  background-color: #0b0907;
+  padding: 1rem 4rem;
+  min-height: 100vh;
+  text-align: center;
+
+  .dosie {
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.1s forwards;
+  }
+
+  > h1 {
+    font-family: "Libre Caslon Text", serif;
+    font-style: italic;
+    color: #e7dfc7;
+    font-size: 3rem;
+    font-weight: 400;
+    opacity: 0;
+    animation: surgirSuave 0.6s ease-out 0.25s forwards;
+  }
+
+  .buttoes {
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.95s forwards;
+  }
+}
+
+.carta {
+  text-align: start;
+  margin: 1rem auto;
+  padding: 24px 28px;
+  width: 60%;
+  background-color: #c4a782;
+  color: #0b0907;
+  font-size: 1rem;
+  font-family: "Libre Caslon Text", serif;
+  line-height: 1.5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: surgirSuave 0.6s ease-out 0.45s forwards;
+
+  h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: "Special Elite", system-ui;
+    color: #9d0121;
+    font-weight: 200;
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.6s forwards;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    color: #0b0907;
+    font-style: normal;
+    line-height: 1.5;
+    margin: 1rem;
+    font-weight: 200;
+    opacity: 0;
+    animation: surgirSuave 0.5s ease-out 0.75s forwards;
+  }
+}
+
+.mes {
+  font-family: "Special Elite", system-ui;
+  color: #ccb88d;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 300;
+  margin: 2rem auto;
+  opacity: 0;
+  animation: surgirSuave 0.5s ease-out 0.85s forwards;
+}
+
+
+.equipe {
+  width: 70%;
+  margin: 4rem auto 2rem auto;
+  padding-top: 2.5rem;
+  border-top: 1px solid #3c3733;
+  text-align: center;
+  opacity: 0;
+  animation: surgirSuave 0.6s ease-out 0.9s forwards;
+}
+
+.agradecimento {
+  font-family: "Libre Caslon Text", serif;
+  font-size: 1.4rem;
+  color: #9e937f;
+  max-width: 700px;
+  margin: 1rem auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+.membros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.membro {
+  background-color: #191613;
+  border: 1px solid #3c3733;
+  padding: 1.5rem 2rem;
+  width: 210px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.membro img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #d6c295;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.membro h3 {
+  font-family: "Libre Caslon Text", serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #e7dfc7;
+  margin-bottom: 0.3rem;
+}
+
+.membro span {
+  font-family: "Special Elite", system-ui;
+  font-size: 0.95rem;
+  color: #d6c295;
+  letter-spacing: 1px;
+}
+
+.membro:hover {
+  border-color: #d6c295;
+  transform: translateY(-6px);
+}
+
+.membro:hover img {
+  transform: scale(1.06);
+}
