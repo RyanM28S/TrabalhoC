@@ -139,6 +139,7 @@ background-color: #ffffff;
 .cadis{
     width: 30%;
     display: flex;
+    margin-left: 7rem;
 align-items: center;
 justify-content: space-around;
     gap: 1rem;
