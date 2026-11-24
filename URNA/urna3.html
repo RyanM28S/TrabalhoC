@@ -25,30 +25,31 @@
            <div class="input">
                 <h2>SEU VOTO PARA</h2>
                 <h1>PRESIDENTE</h1>
-                <div class="voto"><h4>Número:</h4> <input class="inpun1" type="number"><input class="inpun2" type="number"></div>
+                <div class="voto"><h4>Número:</h4> <input class="inpun1" value=""   type="text" inputmode="numeric" maxlength="1" ><input class="inpun2" value=""   type="text"  inputmode="numeric" maxlength="1" ></div>
                 <hr>
                 <p>Aperte a tecla: CONFIRMA para <span>CONFIRMAR</span>  este voto · <span> CORRIGE</span> para <span> REINICIAR</span> este voto</p>
            </div>
           
           </div>
-          <div class="teclas">
+          <div class="teclas" id="teclado">
             <h2>TECLADO</h2>
-            <div class="teclasn">
-              <button>1</button><button>2</button><button>3</button>
+            <div class="teclasn" >
+              <button data-number="1">1</button><button data-number="2">2</button><button data-number="3">3</button>
             </div>
             <div class="teclasn">
-              <button>4</button><button>5</button><button>6</button>
+              <button data-number="4">4</button><button data-number="5">5</button><button data-number="6">6</button>
             </div>
             <div class="teclasn">
-              <button>7</button><button>8</button><button>9</button>
+              <button data-number="7">7</button><button data-number="8">8</button><button data-number="9">9</button>
             </div>
             <div class="teclasn">
-             <button>0</button>
+             <button data-number="0">0</button>
             </div>
-            <div class="teclasl"><a href="urna2.html"><button class="br">BRANCO</button></a><button class="corrige">CORRIGE</button><a href="urna4.html"><button class="confirma">CONFIRMA</button></a></divclas>
+            <div class="teclasl"><a href="urna2.html"><button class="br">BRANCO</button></a><button class="corrige">CORRIGE</button><button onclick="ir()" class="confirma">CONFIRMA</button></divclas>
           </div>
         </div>
       </div>
     </main>
+    <script src="urna.js"></script>
   </body>
 </html>
