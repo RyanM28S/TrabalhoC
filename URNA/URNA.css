@@ -40,7 +40,7 @@ main {
   h2 {
     font-family: "Archivo", sans-serif;
     font-weight: 300;
-    margin: 4rem auto 1rem auto;
+    margin: 3rem auto 1rem auto;
     letter-spacing: 4px;
   }
   h1 {
@@ -103,11 +103,16 @@ main {
     color: #f5f5f5;
     border-radius: 1rem;
       font-family: "Share Tech Mono", monospace;
-    border: 1px solid #22242e ;
+     border: 1px solid #27272a;
     background-color: #08090b;
     padding: 2rem 4.5rem;
+     box-shadow: 0 5px 0 #09090b, 0 7px 10px rgba(0, 0, 0, 0.5);
     margin: 0.5rem;
   }
+  button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #09090b, 0 2px 4px rgba(0, 0, 0, 0.5);
+}
 }
 .br,.confirma,.corrige {
     font-size: 1.3rem;
@@ -150,6 +155,7 @@ justify-content: space-around;
 .cadi{
     border: 1px solid gray;
     padding: 2rem;
+    
     h1{
         font-size: 4rem;
         margin: 1rem auto;
@@ -267,7 +273,7 @@ margin: 0;
         width: 90%;
         background-color: #08090b;
         border: none;
-        margin: 16rem auto 1rem auto;
+        margin: 3rem auto 1rem auto;
     }
      p{
         margin: 1;
@@ -276,4 +282,157 @@ margin: 0;
             font-weight: 600;
         }
     }
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  padding: 14px 20px;
+  border-radius: 6px;
+  background-color: #b91c1c;
+  color: #ffffff;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alerta-tensao {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: rgba(15, 14, 12, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.alerta-tensao.ativo {
+  opacity: 1;
+  pointer-events: all;
+}
+.ficha-oficial {
+  position: relative;
+  max-width: 760px;
+  width: 92%;
+  padding: 52px 48px;
+  background-color: #f3ead8;
+  background-image: radial-gradient(#d6c7ae 1px, transparent 0);
+  background-size: 20px 20px;
+  color: #1c1917;
+  border: 6px double #292524;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.9);
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  text-align: left;
+  animation: entrada-papel 0.25s ease-out;
+}
+
+.carimbo-alerta {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 4px solid #991b1b;
+  color: #991b1b;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+  transform: rotate(-3deg);
+  margin-bottom: 20px;
+  opacity: 0.92;
+}
+
+.cabecalho-orgao {
+  font-size: 1.05rem;
+  color: #44403c;
+  margin: 0 0 12px 0;
+  letter-spacing: 1.5px;
+}
+
+.ficha-oficial hr {
+  border: none;
+  border-top: 2px solid #78716c;
+  margin-bottom: 24px;
+}
+
+.ficha-oficial h2 {
+  font-size: 2.4rem;
+  color: #7f1d1d;
+  margin: 0 0 18px 0;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.ficha-oficial p#alerta-subtitulo {
+  font-size: 1.35rem;
+  color: #1c1917;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+.barra-progresso {
+  width: 100%;
+  height: 18px;
+  background-color: #d6cbb8;
+  border: 2px solid #44403c;
+  margin-bottom: 28px;
+}
+
+.barra-preenchimento {
+  width: 0%;
+  height: 100%;
+  background-color: #991b1b;
+}
+
+.btn-desistir {
+  width: 100%;
+  padding: 18px 24px;
+  background-color: #292524;
+  color: #f3ead8;
+  border: 3px solid #1c1917;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn-desistir:hover {
+  background-color: #991b1b;
+  border-color: #7f1d1d;
+}
+
+
+@keyframes entrada-papel {
+  0% {
+    transform: scale(1.06);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.etice{
+   color: #9d0121;
+    transform: rotate(20deg);
+    border: #970121 solid 1px;
+    width: fit-content;
+    font-size: 1.5rem;
+  text-align: center;
+    background-color: #0b0907;
 }

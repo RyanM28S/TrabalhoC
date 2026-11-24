@@ -8,6 +8,14 @@
   navigation: auto;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #0c0a09; /* Mesmo tom escuro do fundo da sua página */
+  color: #f5f5f4;
+  overflow-x: hidden;
+}
 
 @keyframes surgirSuave {
   from {
@@ -57,12 +65,26 @@ header {
   font-size: 1.2rem;
   border-radius: 50%;
 }
+.circulov{
+   padding: 0.3rem 0.7rem;
+  border: 2px #d6c295 solid;
+  font-size: 1.2rem;
+  background-color: #9d0121;
+  border-radius: 50%;
+}
+.circulof{
+   padding: 0.3rem 0.7rem;
+  border: 2px #d6c295 solid;
+  font-size: 1.2rem;
+  background-color: #220e0e;
+  border-radius: 50%;
+}
 
 
 .parte1 {
   display: flex;
   padding: 1rem 4rem;
-  min-height: 100vh;
+ 
   align-items: center;
   min-width: 100vh;
   background-color: #0b0907;
@@ -166,57 +188,69 @@ header {
   font-size: 1.5rem;
   letter-spacing: 4px;
 }
-
 .timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 2rem;
-  padding-left: 30px;
-  border-left: 1px solid #2b1819;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 20px 0 30px 0;
+  margin-top: 32px;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 32px;
-  opacity: 0;
-  animation: surgirSuave 0.5s ease-out forwards;
+  flex: 1;
+  min-width: 240px;
+  padding-top: 28px;
 }
 
-.timeline-item:nth-child(1) { animation-delay: 0.2s; }
-.timeline-item:nth-child(2) { animation-delay: 0.35s; }
-.timeline-item:nth-child(3) { animation-delay: 0.5s; }
-.timeline-item:nth-child(4) { animation-delay: 0.65s; }
-.timeline-item:nth-child(5) { animation-delay: 0.8s; }
-
+/* Linha horizontal no topo conectando os anos */
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -40px;
-  top: 4px;
-  width: 20px;
-  height: 20px;
-  background-color: #9d0121;
+  top: 8px;
+  left: 0;
+  right: -24px;
+  height: 2px;
+  background-color: #44403c;
+}
+
+/* Remove a sobra da linha depois do último item */
+.timeline-item:last-child::before {
+  right: 0;
+}
+
+/* Bolinha vermelha em cima de cada ano */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
+  background-color: #dc2626;
 }
 
 .timeline-year {
-  color: #d7c096;
-  font-family: "Special Elite", system-ui;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0 0 6px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f5f5f4;
+  margin: 0 0 8px 0;
 }
 
 .timeline-text {
-  color: #8c8784;
   font-size: 1.5rem;
+  color: #a8a29e;
   line-height: 1.5;
   margin: 0;
 }
 
+
 .parte2 {
   background-color: #0b0907;
   padding: 1rem 4rem;
+  height: 100%;
 
   .dosie {
     opacity: 0;
@@ -243,6 +277,7 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  color: black;
 }
 
 .card {
@@ -318,7 +353,7 @@ header {
 .parte3 {
   background-color: #0b0907;
   padding: 1rem 4rem;
-  min-height: 93.5vh;
+
   align-items: center;
 
   #QP {
@@ -378,7 +413,7 @@ header {
   display: block;
   margin: 1rem auto;
   width: 80%;
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: start;
   font-family: "Libre Caslon Text", serif;
   padding: 1rem 2rem;
@@ -391,7 +426,7 @@ header {
   display: block;
   margin: 1rem auto;
   width: 80%;
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: start;
   font-family: "Libre Caslon Text", serif;
   padding: 1rem 2rem;
@@ -409,8 +444,8 @@ header {
 #explica {
   display: none;
   margin: 1rem auto;
-  padding: 24px 28px;
-  width: 80%;
+  padding: 1rem 1rem;
+  width: 70%;
   background-color: #d3bf92;
   color: #0b0907;
   font-size: 1.8rem;
@@ -533,7 +568,13 @@ header {
     color: #e7dcc7;
   }
 }
-
+.top{
+   font-family: "Libre Caslon Text", serif;
+    color: #ded5be;
+    opacity: 0;
+    margin: 1rem auto;
+    animation: surgirSuave 0.5s ease-out 0.8s forwards;
+}
 
 .parte5 {
   background-color: #0b0907;
@@ -562,6 +603,20 @@ header {
   }
 }
 
+.carimbo {
+  position: absolute;
+  top: 26px;
+  right: 32px;
+  padding: 5px 12px;
+  border: 2px solid #881337;
+  color: #881337;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transform: rotate(3deg);
+  opacity: 0.88;
+}
 .carta {
   text-align: start;
   margin: 1rem auto;
@@ -609,9 +664,9 @@ header {
   animation: surgirSuave 0.5s ease-out 0.85s forwards;
 }
 
-
 .equipe {
-  width: 70%;
+  width: 90%;
+  max-width: 1180px;
   margin: 4rem auto 2rem auto;
   padding-top: 2.5rem;
   border-top: 1px solid #3c3733;
@@ -622,10 +677,10 @@ header {
 
 .agradecimento {
   font-family: "Libre Caslon Text", serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #9e937f;
   max-width: 700px;
-  margin: 1rem auto 2.5rem auto;
+  margin: 1rem auto 2.8rem auto;
   line-height: 1.6;
 }
 
@@ -633,51 +688,88 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
 }
-
 .membro {
-  background-color: #191613;
+  position: relative;
+  background-color: #161411;
   border: 1px solid #3c3733;
-  padding: 1.5rem 2rem;
-  width: 210px;
+  border-top: 3px solid #991b1b;
+  padding: 2.8rem 1.2rem 1.5rem 1.2rem;
+  width: 230px;
   text-decoration: none;
-  transition: all 0.4s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Carimbo dinâmico com a função de cada integrante */
+.membro::before {
+  content: attr(data-funcao);
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 86%;
+  padding: 3px 6px;
+  background-color: #261a18;
+  border: 1px solid #991b1b;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: bold;
+  color: #fca5a5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Foto maior e com cores originais */
 .membro img {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 6px;
   border: 2px solid #d6c295;
   object-fit: cover;
-  margin-bottom: 1rem;
-  transition: transform 0.4s ease;
+  image-rendering: auto;
+  margin-bottom: 1.1rem;
+  transition: transform 0.35s ease, border-color 0.35s ease;
 }
+
 
 .membro h3 {
   font-family: "Libre Caslon Text", serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #e7dfc7;
-  margin-bottom: 0.3rem;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #f5f5f4;
+  margin-bottom: 0.45rem;
+  line-height: 1.25;
 }
 
 .membro span {
-  font-family: "Special Elite", system-ui;
-  font-size: 0.95rem;
-  color: #d6c295;
-  letter-spacing: 1px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.78rem;
+  color: #a8a29e;
+  letter-spacing: 0.5px;
+  word-break: break-all;
 }
 
 .membro:hover {
   border-color: #d6c295;
+  border-top-color: #dc2626;
   transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.8);
+}
+
+.membro:hover::before {
+  background-color: #991b1b;
+  color: #ffffff;
 }
 
 .membro:hover img {
-  transform: scale(1.06);
+  border-color: #ffffff;
+  transform: scale(1.04);
 }
