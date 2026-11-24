@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MACAS — 5. Reflexão | O Direito de Escolher</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+  <link href="https://googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reflexao.css">
+</head>
+<body>
+
+  <header>
+      <h1>MACAS</h1>
+      <div class="itens">
+        <div class="iten">
+          <p class="circulof">1</p>
+          <p>INICÍO</p>
+        </div>
+        <div class="iten">
+          <p class="circulof">2</p>
+          <p>CONTEXTO</p>
+        </div>
+        <div class="iten">
+          <p class="circulof">3</p>
+          <p>PERGUNTAS</p>
+        </div>
+        <div class="iten">
+          <p class="circulof">4</p>
+          <p>SIMULAÇÃO</p>
+        </div>
+        <div class="iten">
+          <p class="circulov">5</p>
+          <p>REFLEXÃO</p>
+        </div>
+      </div>
+    </header>
+
+  <main>
+    <section>
+      <span class="museu-tag">Museu de Arte Contemporânea Alberto Salotti</span>
+      <h1>Você apertou confirma.<br><em>Mas não escolheu.</em></h1>
+
+      <div class="terminal-narrativa">
+        <p class="bloco-fala" id="fala-1"></p>
+
+        <div class="arquivo-alerta" id="box-ditadura">
+          <div class="arquivo-alerta-titulo">● Registro de Exceção · 1964–1985</div>
+          <p class="bloco-fala" id="fala-2"></p>
+        </div>
+
+        <p class="bloco-fala" id="fala-3"></p>
+
+        <div class="bloco-presente" id="box-hoje">
+          <div class="bloco-presente-titulo">★ O Brasil de Hoje · Democracia</div>
+          <p class="bloco-fala" id="fala-4"></p>
+        </div>
+      </div>
+
+      <div class="acoes-area">
+        <button class="btn-principal" id="btn-reiniciar" onclick="window.location.href='../index.html'">
+          REINICIAR EXPOSIÇÃO
+        </button>
+        <button class="btn-pular" id="btn-pular" onclick="pularAnimacao()">
+          Pular digitação »
+        </button>
+      </div>
+    </section>
+
+    <aside class="dossie-card">
+      <div class="dossie-header">
+        <span>BOLETIM DE URNA Nº 0064</span>
+        <span>STATUS: MONITORADO</span>
+      </div>
+
+      <div class="dossie-linha">
+        <span>OPÇÃO DO ELEITOR:</span>
+        <span class="tarja-censura" id="censura-1">BLOQUEADA PELO SISTEMA</span>
+      </div>
+
+      <div class="dossie-linha">
+        <span>CANDIDATOS OPOSIÇÃO:</span>
+        <span class="tarja-censura" id="censura-2">CASSADOS / ILEGAIS</span>
+      </div>
+
+      <div class="dossie-linha">
+        <span>RESULTADO FINAL:</span>
+        <span class="tarja-censura" id="censura-3">JÁ ESTAVA DECIDIDO</span>
+      </div>
+
+      <div class="dossie-linha">
+        <span>LIBERDADE DE CRÍTICA:</span>
+        <span class="tarja-censura" id="censura-4">CENSURADA</span>
+      </div>
+
+      <p class="dossie-nota">
+        Esta simulação reproduz a lógica do bipartidarismo imposto pelo AI-2 e das eleições indiretas, onde o cidadão comum era afastado das decisões do país.
+      </p>
+
+      <div class="carimbo-arquivo">Arquivo · 1964–1985</div>
+    </aside>
+  </main>
+
+  <script src="reflexao.js"></script>
+</body>
+</html>
