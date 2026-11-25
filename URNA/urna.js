@@ -2,6 +2,7 @@ const input1 = document.querySelector(".inpun1");
 const input2 = document.querySelector(".inpun2");
 const teclado = document.getElementById("teclado");
 const btnCorrige = document.querySelector(".corrige");
+const btnBranco = document.querySelector(".br");
 
 let tempoToast;
 
@@ -40,7 +41,6 @@ function iniciarTensao(titulo, subtitulo, destino) {
   elTitulo.textContent = titulo;
   elSubtitulo.textContent = subtitulo;
 
-  // Reseta e inicia a barra de progresso
   barra.style.transition = "none";
   barra.style.width = "0%";
   void barra.offsetWidth;
@@ -65,7 +65,6 @@ function iniciarTensao(titulo, subtitulo, destino) {
   elTitulo.textContent = titulo;
   elSubtitulo.textContent = subtitulo;
 
-  // Reseta a barra antes de iniciar a contagem de 4 segundos
   barra.style.transition = "none";
   barra.style.width = "0%";
   void barra.offsetWidth;
@@ -80,13 +79,22 @@ function iniciarTensao(titulo, subtitulo, destino) {
   }, 4000);
 }
 
-// Ação do botão DESISTIR
+btnBranco.addEventListener("click", () => {
+  iniciarTensao(
+    "VOCÊ votou branco but?",
+    "ESTE TERMINAL ESTÁ SENDO OBSERVADO. SUA OPÇÃO SERÁ REGISTRADA NOS ARQUIVOS DO DEPARTAMENTO.",
+    "urna13.html",
+  );
+  setTimeout(() => {
+    window.top.location.href = "reflexão.html";
+  }, 4000);
+});
+
 document.getElementById("btn-desistir").addEventListener("click", () => {
   clearTimeout(tempoRedirecionamento);
   const overlay = document.getElementById("alerta-tensao");
   overlay.classList.remove("ativo");
 
-  // Limpa os campos para o usuário digitar outro número
   input1.value = "";
   input2.value = "";
   input1.focus();
