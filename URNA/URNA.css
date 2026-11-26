@@ -81,7 +81,14 @@ main {
   font-size: 1.1rem;
   font-weight: 300;
 }
+
+
 .teclas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 0 0 0;
   width: 35%;
   text-align: center;
   border-radius: 1rem;
@@ -97,29 +104,29 @@ main {
     letter-spacing: 4px;
   }
 }
-.teclasn {
-  button {
-    font-size: 3rem;
-    color: #f5f5f5;
-    border-radius: 1rem;
-      font-family: "Share Tech Mono", monospace;
-     border: 1px solid #27272a;
-    background-color: #08090b;
-    padding: 2rem 4.5rem;
-     box-shadow: 0 5px 0 #09090b, 0 7px 10px rgba(0, 0, 0, 0.5);
-    margin: 0.5rem;
-  }
-  button:active {
+.teclasn button {
+  font-size: 3rem;
+  color: #f5f5f5;
+  border-radius: 1rem;
+  font-family: "Share Tech Mono", monospace;
+  border: 3px solid #27272a;
+  background-color: #08080b;
+  padding: 2rem 4.5rem;
+  box-shadow: 0 5px 0 #09090b, 0 7px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.teclasn button:active {
   transform: translateY(4px);
   box-shadow: 0 1px 0 #09090b, 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-}
+
 .br,.confirma,.corrige {
     font-size: 1.3rem;
     padding: 2rem 2.5rem;
     border-radius: 1rem;
     border: none;
-    margin: 0.5rem;
+    margin: 4.5rem 0.5rem 0 0.5rem;
       font-family: "Archivo", sans-serif;
       font-weight: 700;
         transition: transform 0.1s ease, box-shadow 0.1s ease;
