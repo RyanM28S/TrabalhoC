@@ -98,8 +98,11 @@ header {
 }
 
 .direita {
-  margin-left: 10rem;
-  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 9rem auto;
+  gap: 2rem;
+  
 
   .museu {
     opacity: 0;
@@ -153,9 +156,9 @@ header {
 .museu {
   font-family: "Special Elite", system-ui;
   font-weight: 300;
-  margin: 1rem auto;
+  margin: 1rem 1rem;
   color: #970121;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: 4px;
 }
 
@@ -174,7 +177,9 @@ header {
     background-color: #0b0907;
   }
   img {
-    height: 500px;
+    margin-bottom: 1rem;
+    height: 600px;
+    width: 500;
     border: #d4c094 1px solid;
   }
 }
@@ -183,11 +188,21 @@ header {
 .dosie {
   font-family: "Special Elite", system-ui;
   font-weight: 300;
-  margin: 1rem auto;
+  margin: 4rem auto 1rem auto;
   color: #970121;
   font-size: 1.5rem;
   letter-spacing: 4px;
 }
+
+.dosies {
+  font-family: "Special Elite", system-ui;
+  font-weight: 300;
+  margin: 8rem auto 1rem auto;
+  color: #970121;
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
 .timeline {
   display: flex;
   flex-direction: row;
@@ -252,6 +267,7 @@ header {
   padding: 1rem 4rem;
   height: 100%;
 
+
   .dosie {
     opacity: 0;
     animation: surgirSuave 0.5s ease-out 0.1s forwards;
@@ -276,13 +292,14 @@ header {
 .cards {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 7rem;
   color: black;
 }
 
 .card {
+  gap: 5rem;
   background-color: #d2be93;
-  padding: 1rem 2rem;
+  padding: 3rem 3rem;
   transition: all 0.5s ease;
   opacity: 0;
   animation: surgirSuave 0.5s ease-out forwards;
@@ -352,8 +369,7 @@ header {
 
 .parte3 {
   background-color: #0b0907;
-  padding: 1rem 4rem;
-
+  padding: 4rem 4rem;
   align-items: center;
 
   #QP {
@@ -379,8 +395,8 @@ header {
 
 .opcao {
   display: block;
-  margin: 2rem auto;
-  width: 80%;
+  margin: 3rem auto;
+  width: 95%;
   font-size: 1.5rem;
   text-align: start;
   font-family: "Libre Caslon Text", serif;
@@ -411,12 +427,12 @@ header {
 
 .opcaov {
   display: block;
-  margin: 1rem auto;
-  width: 80%;
-  font-size: 1rem;
+  margin: 1.2rem auto;
+  width: 93%;
+  font-size: 1.4rem;
   text-align: start;
   font-family: "Libre Caslon Text", serif;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2.5rem;
   background-color: #1a2015;
   border: 1px solid #569558;
   color: #d6c295;
@@ -424,12 +440,12 @@ header {
 
 .opcaof {
   display: block;
-  margin: 1rem auto;
-  width: 80%;
-  font-size: 1rem;
+  margin: 1.2rem auto;
+  width: 90%;
+  font-size: 1.4rem;
   text-align: start;
   font-family: "Libre Caslon Text", serif;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2.5rem;
   background-color: #220e0e;
   border: 1px solid #9d0020;
   color: #d6c295;
@@ -493,7 +509,7 @@ header {
 .parte4 {
   background-color: #0b0907;
   padding: 1rem 4rem;
-  min-height: 100vh;
+  min-height: 90vh;
   text-align: center;
 
   .dosie {
@@ -528,8 +544,8 @@ header {
   text-align: center;
   width: 80%;
   background-color: #191613;
-  padding: 4rem 2rem;
-  margin: 1rem auto;
+  padding: 5rem 3rem;
+  margin: 5rem auto;
   border: #3c3733 1px solid;
   opacity: 0;
   animation: surgirSuave 0.6s ease-out 0.5s forwards;
