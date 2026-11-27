@@ -137,7 +137,7 @@ h1 em {
 }
 
 .bloco-fala {
-  font-size: 1.12rem;
+  font-size: 1.2rem;
   line-height: 1.75;
   color: #d6d3cd;
   min-height: 28px;
@@ -185,7 +185,7 @@ h1 em {
 
 .arquivo-alerta-titulo {
   font-family: 'Courier Prime', monospace;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--accent-red);
@@ -213,7 +213,7 @@ h1 em {
 
 .bloco-presente-titulo {
   font-family: 'Courier Prime', monospace;
-  font-size: 0.82rem;
+  font-size: 1rem;
   letter-spacing: 2px;
   color: var(--accent-gold);
   text-transform: uppercase;
@@ -223,7 +223,7 @@ h1 em {
 .dossie-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  padding: 28px;
+  padding: 35px;
   position: relative;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
 }
@@ -236,7 +236,7 @@ h1 em {
   justify-content: space-between;
   align-items: center;
   font-family: 'Courier Prime', monospace;
-  font-size: 0.78rem;
+  font-size: 0.95 rem;
   color: var(--text-muted);
 }
 
@@ -246,7 +246,7 @@ h1 em {
   padding: 12px 0;
   border-bottom: 1px solid #1c1c1c;
   font-family: 'Courier Prime', monospace;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
 }
 
 .dossie-linha span:first-child {
@@ -272,7 +272,7 @@ h1 em {
 
 .dossie-nota {
   margin-top: 20px;
-  font-size: 0.88rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: var(--text-muted);
 }
@@ -284,7 +284,7 @@ h1 em {
   color: var(--accent-red);
   font-family: 'Courier Prime', monospace;
   font-weight: bold;
-  font-size: 0.85rem;
+  font-size: 0.90rem;
   padding: 6px 14px;
   letter-spacing: 2px;
   transform: rotate(-4deg);

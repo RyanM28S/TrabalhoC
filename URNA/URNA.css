@@ -168,6 +168,21 @@ justify-content: space-around;
         margin: 1rem auto;
     }
 }
+
+.cadifinal{
+  justify-content: space-between;
+    border: 1px solid gray;
+    padding: 2rem 2rem;
+    
+    h1{
+        font-size: 4rem;
+        margin: 1rem auto;
+    }
+    p {
+      padding: 1rem 0;
+    }
+}
+
 .digite{
     p{
         font-size: 1.2rem;
